@@ -17,7 +17,7 @@ console.log('[Transaction Manager] 2.', TransactionManagerServiceInstance.checkF
 const transaction1 = TransactionManagerServiceInstance.transfer(
   checkingAccountA.id,
   checkingAccountB.id,
-  new MoneyModel({ amount: 50, currency: CurrencyType.RON })
+  new MoneyModel({ amount: 50, currency: CurrencyType.USD })
 );
 
 console.log('[Transaction Manager] 3.', transaction1);

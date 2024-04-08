@@ -28,9 +28,11 @@ npm run dev
 - You cannot perform the transfer functionality between the following types of accounts:
   - Savings Accounts => Checking Accounts
   - Savings Accounts => Savings Accounts
-- A transaction final amount must be in the same currency as the target account (consider currency conversion).
+- A transaction final amount must be in the same currency as the target account (consider currency conversion both for accounts and for the value transferred).
 - The result of a transaction or withdrawal must not lead to negative account balance
 - The result of a withdrawal must be visible as a transaction
+- A Checking account transaction / withdrawal operation should verify that it does not go above its daily limits
+- A Checking account transaction / withdrawal operation cannot be performed on an expired card
 
 ## Problem Statement
 - Make sure the `Business Preconditions` are met
@@ -38,6 +40,7 @@ npm run dev
 - Implement the `CapitalizationFrequency.QUARTERLY` in the `SavingsManagerService`
 - Identify and rectify various edge cases in the app (e.g.: transfer functionality)
 - Write clear and maintainable code while adhering to coding standards and best practices.
+- Write unit tests to verify the functionality of your scenarios
 
 ## Notes
 - Please refrain from forking this repository.
